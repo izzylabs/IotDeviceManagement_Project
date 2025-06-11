@@ -22,18 +22,18 @@ This project implements a cloud-native microservice architecture for managing Io
 
 ## Technologies
 - TypeScript & Node.js backend
-- SQL Database (TypeORM)
+- SQL Database (SSMS)
 - Azure Cloud (for hosting & services)
-- Messaging queue (e.g., Azure Service Bus or RabbitMQ)
+- Messaging queue (e.g., Azure Service Bus)
 - In-memory cache
 
 ## Getting Started
 
 ### Prerequisites
-- Node.js (version x.x.x)
-- Database (PostgreSQL/MySQL)
+- Node.js 
+- Database (SSMS)
 - Messaging Queue Service
-- Azure CLI (if deploying on Azure)
+- Azure CLI
 
 ### Installation
 1. Clone the repo:
