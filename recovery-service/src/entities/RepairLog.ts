@@ -1,25 +1,30 @@
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from 'typeorm';
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  CreateDateColumn,
+} from 'typeorm';
 
 @Entity()
 export class RepairLog {
-    @PrimaryGeneratedColumn('uuid')
-    id: string;
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
-    @Column()
-    device: string;
+  @Column()
+  device: string;
 
-    @Column()
-    command: string;
+  @Column()
+  command: string;
 
-    @Column()
-    executionId: string;
+  @Column()
+  executionId: string;
 
-    @Column()
-    action: string;
+  @Column()
+  action: string;
 
-    @Column()
-    status: 'PENDING' | 'SUCCEEDED' | 'FAILED';
+  @Column()
+  status: 'PENDING' | 'SUCCEEDED' | 'FAILED';
 
-    @CreateDateColumn()
-    triggeredAt: Date;
+  @CreateDateColumn()
+  triggeredAt: Date;
 }

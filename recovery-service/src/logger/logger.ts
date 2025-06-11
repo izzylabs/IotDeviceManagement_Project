@@ -6,7 +6,7 @@ function createLogProxy(originalFn: (...args: any[]) => void, type: string) {
       .map((arg) => (typeof arg === 'string' ? arg : JSON.stringify(arg)))
       .join(' ');
 
-    sendMessage('device-registry-logs', {
+    sendMessage('recovery-service-logs', {
       type,
       message,
       timestamp: new Date().toISOString(),

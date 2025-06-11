@@ -73,7 +73,7 @@ jobs:
     steps:
       - uses: azure/login@v2
         with:
-          creds: ${{ secrets.DEVICE_REGISTRY_AZURE_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
@@ -84,5 +84,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          publish-profile: ${{ secrets.DEVICE_REGISTRY_AZURE_WEBAPP_PUBLISH_PROFILE }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: ./device-registry/

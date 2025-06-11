@@ -1,25 +1,31 @@
-import { Entity } from "typeorm/decorator/entity/Entity";
-import {Column, CreateDateColumn, JoinTable, ManyToMany, PrimaryGeneratedColumn} from "typeorm";
-import {DeviceCommand} from "./device-command";
+import { Entity } from 'typeorm/decorator/entity/Entity';
+import {
+  Column,
+  CreateDateColumn,
+  JoinTable,
+  ManyToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+import { DeviceCommand } from './device-command';
 
 @Entity()
 export class Device {
-    @PrimaryGeneratedColumn('uuid')
-    id: string;
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
-    @Column()
-    name: string;
+  @Column()
+  name: string;
 
-    @Column()
-    isActive: boolean;
+  @Column()
+  isActive: boolean;
 
-    @Column({type: 'float', nullable: true})
-    batteryLevel: number;
+  @Column({ type: 'float', nullable: true })
+  batteryLevel: number;
 
-    @CreateDateColumn()
-    timestamp: Date;
+  @CreateDateColumn()
+  timestamp: Date;
 
-    @ManyToMany(() => DeviceCommand, command => command.devices)
-    @JoinTable()
-    commands: DeviceCommand[];
+  @ManyToMany(() => DeviceCommand, (command) => command.devices)
+  @JoinTable()
+  commands: DeviceCommand[];
 }

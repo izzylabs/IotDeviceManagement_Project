@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "ts-node-dev --respawn src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "format-fix": "prettier --config --write \"src/**/*{.ts,.tsx,.js,.jsx,.json,.json,.css,.scss,.html}\""
   },
   "keywords": [],
   "author": "",
@@ -23,6 +24,7 @@
     "@types/express": "^5.0.3",
     "@types/node": "^22.15.29",
     "ts-node-dev": "^2.0.0",
+    "prettier": "3.5.3",
     "typescript": "^5.8.3"
   }
 }
