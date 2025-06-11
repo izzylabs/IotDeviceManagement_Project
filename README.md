@@ -1,1 +1,1 @@
-# iot-smart-home-device-management-ts
+# IotDeviceManagement_Project
