@@ -1,2 +1,1 @@
-# IotDeviceManagement_Project
-Cloud project based  on azure
+# iot-smart-home-device-management-ts
